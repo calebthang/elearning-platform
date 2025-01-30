@@ -1,0 +1,203 @@
+/* src/styles/components/SignUp.css */
+.signup-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .signup-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 480px;
+  }
+  
+  .signup-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .signup-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .signup-subtitle {
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .form-input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #4B90E2;
+    box-shadow: 0 0 0 2px rgba(75, 144, 226, 0.2);
+  }
+  
+  .role-selector {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  
+  .role-option {
+    flex: 1;
+    padding: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .role-option:hover {
+    border-color: #4B90E2;
+    background-color: rgba(75, 144, 226, 0.05);
+  }
+  
+  .role-option.selected {
+    border-color: #4B90E2;
+    background-color: rgba(75, 144, 226, 0.1);
+  }
+  
+  .role-option-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #4B90E2;
+  }
+  
+  .role-option-label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .signup-button {
+    background-color: #4B90E2;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .signup-button:hover {
+    background-color: #357ABD;
+  }
+  
+  .signup-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    background-color: #FEE2E2;
+    border: 1px solid #FCA5A5;
+    color: #DC2626;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .signup-divider {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+    color: #666;
+  }
+  
+  .signup-divider::before,
+  .signup-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .signup-divider span {
+    padding: 0 16px;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .login-link a {
+    color: #4B90E2;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Password strength indicator */
+  .password-strength {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+  
+  .strength-weak {
+    color: #DC2626;
+  }
+  
+  .strength-medium {
+    color: #F59E0B;
+  }
+  
+  .strength-strong {
+    color: #10B981;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .signup-card {
+      padding: 24px;
+    }
+  
+    .role-selector {
+      flex-direction: column;
+    }
+  
+    .role-option {
+      padding: 12px;
+    }
+  }
